@@ -1,4 +1,4 @@
 fastapi
 uvicorn
 pyyaml
- fastapi.middleware.cors
+from starlette.middleware.cors import CORSMiddleware 
