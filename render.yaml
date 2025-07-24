@@ -1,46 +1,7 @@
-colleges:
-  - counselling_no: "3011"
-    name: "National Institute of Technology, Tiruchirappalli"
-    location: "Tanjore Main Road, NH‑83, Tiruchirappalli"
-    dept: ["CSE", "ECE", "ME", "CE", "EE", "CHE", "MME", "ICE", "Architecture"]
-    phone_no: "0431‑2503000"
-    email: "admissions@nitt.edu"
-    cutoff:
-      CSE: "AIR ~15000"
-      ECE: "AIR ~18000"
-      ME: "AIR ~25000"
-      CE: "AIR ~28000"
-      EE: "AIR ~23000"
-      CHE: "AIR ~33000"
-      MME: "AIR ~34000"
-      ICE: "AIR ~27000"
-      Architecture: "NATA-based"
-
-  - counselling_no: "314"
-    name: "Indian Institute of Information Technology, Tiruchirappalli"
-    location: "Sethurapatti, Tiruchirappalli"
-    dept: ["CSE", "CSE (AI & DS)", "ECE", "ECE (VLSI)"]
-    phone_no: "9442045851"
-    email: "office@iiitt.ac.in"
-    cutoff:
-      CSE: "AIR ~18000"
-      AI & DS: "AIR ~20000"
-      ECE: "AIR ~22000"
-      VLSI: "AIR ~25000"
-
-  - counselling_no: "3701"
-    name: "K. Ramakrishnan College of Technology (KRCT)"
-    location: "Samayapuram, Tiruchirappalli"
-    dept: ["CSE", "AI & DS", "IT", "ECE", "EEE", "MECH", "Civil"]
-    phone_no: "0431-2670799"
-    email: "info@krct.ac.in"
-    cutoff:
-      CSE: "176.5"
-      AI & DS: "173.0"
-      IT: "172.0"
-      ECE: "170.0"
-      EEE: "168.0"
-      MECH: "160.0"
-      Civil: "158.0"
-
-  # Add the rest of the colleges here (as shown in previous response)
+services:
+  - type: web
+    name: college-api
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port 8000"
