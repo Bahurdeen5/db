@@ -1,4 +1,2 @@
 fastapi
-uvicorn
-pyyaml
-from starlette.middleware.cors import CORSMiddleware 
+uvicorn[standard]
